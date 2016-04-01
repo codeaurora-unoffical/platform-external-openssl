@@ -534,8 +534,7 @@ int ssl3_enc(SSL *s, int send)
 			/* otherwise, rec->length >= bs */
 			}
 		
-		if(EVP_Cipher(ds,rec->data,rec->input,l) < 1)
-			return -1;
+		EVP_Cipher(ds,rec->data,rec->input,l);
 
 		if (EVP_MD_CTX_md(s->read_hash) != NULL)
 			mac_size = EVP_MD_CTX_size(s->read_hash);

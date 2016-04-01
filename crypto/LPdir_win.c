@@ -37,7 +37,7 @@
 #if defined(LP_SYS_WINCE) && !defined(FindFirstFile)
 # define FindFirstFile FindFirstFileW
 #endif
-#if defined(LP_SYS_WINCE) && !defined(FindNextFile)
+#if defined(LP_SYS_WINCE) && !defined(FindFirstFile)
 # define FindNextFile FindNextFileW
 #endif
 
